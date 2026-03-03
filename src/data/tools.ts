@@ -11,6 +11,16 @@ export interface Tool {
 
 export const tools: Tool[] = [
   {
+    id: 'pixel-shrink',
+    name: 'Pixel Shrink',
+    description: 'Compress a single photo or a whole folder of images instantly to reduce their size.',
+    category: 'utility',
+    version: '1.0.0',
+    url: 'https://pixelshrinkdevx.netlify.app',
+    color: '#FF00FF',
+    tags: ['Compression', 'Image', 'Utility', 'Batch'],
+  },
+  {
     id: 'qr-code-generator',
     name: 'QR Code Generator',
     description: 'Instantly generate high-quality QR codes from any website link.',
