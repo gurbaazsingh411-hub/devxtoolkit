@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Mario color palette */
+    --background: 220 60% 12%;
+    --foreground: 45 100% 95%;
+
+    --card: 220 50% 16%;
+    --card-foreground: 45 100% 95%;
+
+    --popover: 220 50% 16%;
+    --popover-foreground: 45 100% 95%;
+
+    /* Mario Red */
+    --primary: 0 85% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Question Block Gold */
+    --secondary: 42 100% 50%;
+    --secondary-foreground: 0 0% 10%;
+
+    /* Pipe Green */
+    --muted: 120 40% 18%;
+    --muted-foreground: 120 20% 60%;
+
+    /* Star Yellow */
+    --accent: 50 100% 55%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Brick Brown border */
+    --border: 25 50% 30%;
+    --input: 25 50% 30%;
+    --ring: 0 85% 50%;
+
+    --radius: 0px;
+
+    /* Mario specific */
+    --mario-red: 0 85% 50%;
+    --mario-blue: 220 70% 45%;
+    --mario-green: 120 60% 35%;
+    --mario-gold: 42 100% 50%;
+    --mario-brown: 25 50% 30%;
+    --mario-sky: 200 80% 55%;
+    --coin-gold: 45 100% 55%;
+
+    --sidebar-background: 220 50% 14%;
+    --sidebar-foreground: 45 100% 95%;
+    --sidebar-primary: 0 85% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 120 40% 18%;
+    --sidebar-accent-foreground: 45 100% 95%;
+    --sidebar-border: 25 50% 30%;
+    --sidebar-ring: 0 85% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Share Tech Mono', monospace;
+    image-rendering: pixelated;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Press Start 2P', cursive;
+  }
+}
+
+/* Pixel border - brick style */
+.pixel-border {
+  box-shadow:
+    4px 0 0 0 hsl(var(--mario-brown)),
+    -4px 0 0 0 hsl(var(--mario-brown)),
+    0 4px 0 0 hsl(var(--mario-brown)),
+    0 -4px 0 0 hsl(var(--mario-brown));
+}
+
+.pixel-border-gold {
+  box-shadow:
+    4px 0 0 0 hsl(var(--mario-gold)),
+    -4px 0 0 0 hsl(var(--mario-gold)),
+    0 4px 0 0 hsl(var(--mario-gold)),
+    0 -4px 0 0 hsl(var(--mario-gold));
+}
+
+/* Question block pattern */
+.question-block {
+  background: linear-gradient(135deg, hsl(42 100% 50%), hsl(35 100% 40%));
+  border: 3px solid hsl(25 70% 25%);
+  box-shadow: 
+    inset 3px 3px 0 hsl(50 100% 70%),
+    inset -3px -3px 0 hsl(30 80% 30%);
+}
+
+/* Brick pattern */
+.brick-pattern {
+  background-color: hsl(15 60% 35%);
+  background-image:
+    linear-gradient(to right, hsl(25 50% 20%) 1px, transparent 1px),
+    linear-gradient(to bottom, hsl(25 50% 20%) 1px, transparent 1px);
+  background-size: 32px 16px;
+  background-position: 0 0, 16px 8px;
+}
+
+/* Coin shine */
+@keyframes coin-spin {
+  0%, 100% { transform: scaleX(1); }
+  50% { transform: scaleX(0.2); }
+}
+
+@keyframes coin-float {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-30px); opacity: 0; }
+}
+
+@keyframes bounce-mario {
+  0%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-20px); }
+  60% { transform: translateY(-10px); }
+}
+
+@keyframes question-bump {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes pipe-emerge {
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes star-power {
+  0% { filter: hue-rotate(0deg) brightness(1); }
+  25% { filter: hue-rotate(90deg) brightness(1.3); }
+  50% { filter: hue-rotate(180deg) brightness(1); }
+  75% { filter: hue-rotate(270deg) brightness(1.3); }
+  100% { filter: hue-rotate(360deg) brightness(1); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% { opacity: 1; }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% { opacity: 0.85; }
+}
+
+@keyframes cloud-drift {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100vw); }
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 5px hsl(var(--mario-gold) / 0.5); }
+  50% { box-shadow: 0 0 20px hsl(var(--mario-gold) / 0.8), 0 0 40px hsl(var(--mario-gold) / 0.3); }
+}
+
+.animate-coin-spin {
+  animation: coin-spin 1s ease-in-out infinite;
+}
+
+.animate-bounce-mario {
+  animation: bounce-mario 0.6s ease-in-out;
+}
+
+.animate-question-bump {
+  animation: question-bump 0.3s ease-in-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-flicker {
+  animation: flicker 3s infinite;
+}
+
+.animate-glitch {
+  animation: glitch 0.3s ease-in-out;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-star-power {
+  animation: star-power 1s linear infinite;
+}
+
+/* Mario text glow */
+.mario-glow {
+  text-shadow:
+    0 0 7px hsl(var(--mario-red)),
+    0 0 10px hsl(var(--mario-red)),
+    0 0 21px hsl(var(--mario-red)),
+    0 0 42px hsl(var(--mario-red) / 0.3);
+}
+
+.gold-glow {
+  text-shadow:
+    0 0 7px hsl(var(--mario-gold)),
+    0 0 15px hsl(var(--mario-gold) / 0.5);
+}
+
+.green-glow {
+  text-shadow:
+    0 0 7px hsl(var(--mario-green)),
+    0 0 15px hsl(var(--mario-green) / 0.5);
+}
+
+/* Ground blocks */
+.ground-pattern {
+  background: repeating-linear-gradient(
+    90deg,
+    hsl(25 55% 30%) 0px,
+    hsl(25 55% 30%) 31px,
+    hsl(20 50% 22%) 31px,
+    hsl(20 50% 22%) 32px
+  ),
+  repeating-linear-gradient(
+    0deg,
+    hsl(25 55% 30%) 0px,
+    hsl(25 55% 30%) 15px,
+    hsl(20 50% 22%) 15px,
+    hsl(20 50% 22%) 16px
+  );
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--mario-brown));
+  border: 2px solid hsl(var(--mario-brown) / 0.5);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--mario-red));
+}
