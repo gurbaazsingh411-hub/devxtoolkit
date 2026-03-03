@@ -7,6 +7,7 @@ import { playCoinSound, playClickSound, playPipeSound } from '@/lib/sounds';
 const categoryIcons: Record<string, string> = {
     game: '🎮',
     experiment: '🧪',
+    science: '🔭',
     art: '🎨',
     other: '❓',
 };
@@ -30,8 +31,8 @@ const ProjectGrid = () => {
                         whileTap={{ scale: 0.95 }}
                         onClick={() => { playClickSound(); setActiveCategory(cat.id); }}
                         className={`px-4 py-2 font-pixel text-[8px] sm:text-[10px] transition-all border-2 ${activeCategory === cat.id
-                                ? 'question-block text-secondary-foreground border-purple-600'
-                                : 'bg-card text-foreground hover:border-purple-400 border-border'
+                            ? 'question-block text-secondary-foreground border-purple-600'
+                            : 'bg-card text-foreground hover:border-purple-400 border-border'
                             }`}
                     >
                         <span className="mr-1">{cat.icon}</span>

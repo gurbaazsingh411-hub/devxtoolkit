@@ -7,6 +7,7 @@ import { ArrowLeft } from 'lucide-react';
 const categoryIcons: Record<string, string> = {
     game: '🎮',
     experiment: '🧪',
+    science: '🔭',
     art: '🎨',
     other: '❓',
 };

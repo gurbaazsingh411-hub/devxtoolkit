@@ -2,7 +2,7 @@ export interface Project {
     id: string;
     name: string;
     description: string;
-    category: 'game' | 'experiment' | 'art' | 'other';
+    category: 'game' | 'experiment' | 'art' | 'science' | 'other';
     version: string;
     url: string;
     color: string;
@@ -10,6 +10,36 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+    {
+        id: 'science-simulation',
+        name: 'Science Simulation',
+        description: 'Interactive science simulations built for a hackathon.',
+        category: 'science',
+        version: '1.0.0',
+        url: 'https://sciencesimulationdevx.netlify.app/',
+        color: '#00FA9A',
+        tags: ['Science', 'Simulation', 'Hackathon'],
+    },
+    {
+        id: 'quantum-playground',
+        name: 'Quantum Playground',
+        description: 'A sandbox for visualizing quantum mechanics concepts.',
+        category: 'science',
+        version: '1.2.0',
+        url: 'https://quantum-playground-one.vercel.app/',
+        color: '#8A2BE2',
+        tags: ['Science', 'Quantum', 'Physics'],
+    },
+    {
+        id: 'devx-orbitary',
+        name: 'DevX Orbitary',
+        description: 'Orbital mechanics and gravity simulation.',
+        category: 'science',
+        version: '1.0.5',
+        url: 'https://devxorbitary.netlify.app/',
+        color: '#FF8C00',
+        tags: ['Science', 'Space', 'Gravity'],
+    },
     {
         id: 'devx-holi',
         name: 'DevX Holi',
@@ -66,6 +96,7 @@ export const projectCategories = [
     { id: 'all', name: 'ALL PROJECTS', icon: '👾' },
     { id: 'game', name: 'GAMES', icon: '🎮' },
     { id: 'experiment', name: 'WEIRD STUFF', icon: '🧪' },
+    { id: 'science', name: 'SCIENCE', icon: '🔭' },
     { id: 'art', name: 'PIXELS', icon: '🎨' },
     { id: 'other', name: '???', icon: '❓' },
 ];
