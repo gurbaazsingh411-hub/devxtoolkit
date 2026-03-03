@@ -11,6 +11,16 @@ export interface Tool {
 
 export const tools: Tool[] = [
   {
+    id: 'qr-code-generator',
+    name: 'QR Code Generator',
+    description: 'Instantly generate high-quality QR codes from any website link.',
+    category: 'utility',
+    version: '1.0.0',
+    url: 'https://qrcodedevx.netlify.app',
+    color: '#00FFFF',
+    tags: ['QR Code', 'Utility', 'Generator'],
+  },
+  {
     id: 'devx-ai-assistant',
     name: 'AI Assistant',
     description: 'An intelligent coding companion that helps you debug, refactor, and ship faster. Powered by cutting-edge LLMs.',
