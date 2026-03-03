@@ -6,6 +6,7 @@ import ArcadeLobby3D from '@/components/ArcadeLobby3D';
 import ToolGrid from '@/components/ToolGrid';
 import PixelNav from '@/components/PixelNav';
 import MusicToggle from '@/components/MusicToggle';
+import ProjectGrid from '@/components/ProjectGrid';
 
 const Index = () => {
   const [phase, setPhase] = useState<'splash' | 'boot' | 'main'>('splash');
@@ -116,6 +117,17 @@ const Index = () => {
 
           {/* 2D Grid */}
           <ToolGrid />
+
+          {/* Special Pipe Divider for Projects */}
+          <div className="flex items-center justify-center gap-4 py-12 px-4 mt-8">
+            <div className="h-1 flex-1 max-w-24 bg-purple-500" />
+            <span className="text-2xl">👾</span>
+            <span className="font-pixel text-[10px] text-purple-400">CRAZY RANDOM PROJECTS</span>
+            <span className="text-2xl">👾</span>
+            <div className="h-1 flex-1 max-w-24 bg-purple-500" />
+          </div>
+
+          <ProjectGrid />
         </div>
 
         {/* Ground footer */}
