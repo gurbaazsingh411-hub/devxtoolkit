@@ -11,10 +11,20 @@ export interface Project {
 
 export const projects: Project[] = [
     {
+        id: 'devx-holi',
+        name: 'DevX Holi',
+        description: 'A colorful holi shooter game.',
+        category: 'game',
+        version: '1.0.0',
+        url: 'https://devxholi.netlify.app',
+        color: '#FF00FF',
+        tags: ['Game', 'Shooter', 'Holi', 'Chaos'],
+    },
+    {
         id: 'grim-date',
         name: 'Grim Date',
         description: 'A dating game made for when people are dead.',
-        category: 'experiment',
+        category: 'game',
         version: '1.0.0',
         url: 'https://grimdategame.netlify.app/',
         color: '#FF0000',
