@@ -11,6 +11,16 @@ export interface Project {
 
 export const projects: Project[] = [
     {
+        id: 'grim-date',
+        name: 'Grim Date',
+        description: 'A dating game made for when people are dead.',
+        category: 'experiment',
+        version: '1.0.0',
+        url: 'https://grimdategame.netlify.app/',
+        color: '#FF0000',
+        tags: ['Game', 'Dating', 'Chaos', 'Dead'],
+    },
+    {
         id: 'crazy-canvas',
         name: 'Crazy Canvas',
         description: 'An infinite public canvas where anyone can draw a single pixel per minute.',
