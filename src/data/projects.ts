@@ -66,7 +66,7 @@ export const projects: Project[] = [
         description: 'An infinite public canvas where anyone can draw a single pixel per minute.',
         category: 'experiment',
         version: '1.0.0',
-        url: '#',
+        url: 'https://crazycanvadevx.netlify.app',
         color: '#FF00FF',
         tags: ['Art', 'Public', 'Chaos'],
     },
@@ -89,6 +89,16 @@ export const projects: Project[] = [
         url: '#',
         color: '#00FFFF',
         tags: ['Math', 'Art', 'Generative'],
+    },
+    {
+        id: 'devx-museum',
+        name: 'DevX Museum',
+        description: 'An immersive digital gallery showcasing the history and evolution of DevX projects.',
+        category: 'art',
+        version: '1.0.0',
+        url: 'https://devxmuseum.netlify.app/',
+        color: '#FFC300',
+        tags: ['Museum', 'Gallery', 'History'],
     }
 ];
 
